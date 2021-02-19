@@ -1,1 +1,1 @@
-<h1 align='center>AgriVend</h1>
+<h1 align='center'>AgriVend</h1>
