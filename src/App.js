@@ -1,6 +1,7 @@
 import './App.css';
 import Login from './Components/Login/Login'
-import Register from './/Components/Register/Register'
+import Register from './Components/Register/Register'
+import Home from './Components/Home/Home';
 
 import {
   BrowserRouter as Router,
@@ -16,6 +17,10 @@ function App() {
       <div className="app">
 
         <Switch>
+
+          <Route path="/">
+            <Home />
+          </Route>
 
           <Route path="/login">
             <Login />

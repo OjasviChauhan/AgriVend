@@ -24,9 +24,6 @@ h2 {
 }
 
 
-
-/* STRUCTURE */
-
 .wrapper {
   display: flex;
   align-items: center;
@@ -61,9 +58,6 @@ h2 {
 }
 
 
-
-/* TABS */
-
 h2.inactive {
   color: #cccccc;
 }
@@ -73,9 +67,6 @@ h2.active {
   border-bottom: 2px solid #5fbae9;
 }
 
-
-
-/* FORM TYPOGRAPHY*/
 
 input[type=button], input[type=submit], input[type=reset]  {
   background-color: #56baed;
@@ -141,11 +132,6 @@ input[type=text]:placeholder {
   color: #cccccc;
 }
 
-
-
-/* ANIMATIONS */
-
-/* Simple CSS3 Fade-in-down Animation */
 .fadeInDown {
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
@@ -245,9 +231,6 @@ input[type=text]:placeholder {
   width: 100%;
 }
 
-
-
-/* OTHERS */
 
 *:focus {
     outline: none;
