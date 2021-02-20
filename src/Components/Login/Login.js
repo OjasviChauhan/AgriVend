@@ -1,8 +1,14 @@
 import React from 'react'
 import './Login.css'
 
+import { auth, provider } from '../../firebase';
+
 const Login = () => {
 
+    const signIn = () => {
+        auth.signInWithPopup(provider)
+            .catch(err => alert(err.message));
+    }
     return (
         <div className='login'>
 
@@ -15,15 +21,11 @@ const Login = () => {
                     </div>
 
                     <form>
-                        <input type="text" id="Username" class="fadeIn second" name="login" placeholder="login" />
+                        <input type="text" id="Username" class="fadeIn second" name="login" placeholder="Username" />
                         <input type="text" id="password" class="fadeIn third" name="login" placeholder="password" />
                         <input type="submit" class="fadeIn fourth" value="Log In" />
-                        <input type="submit" class="fadeIn fourth" value="Log In with Google" />
+                        <input type="submit" class="fadeIn fourth" value="Log In with Google" onClick={signIn} />
                     </form>
-
-                    <div id="formFooter">
-                        <a classNames="underlineHover" href="#">Forgot Password?</a>
-                    </div>
 
                 </div>
             </div>

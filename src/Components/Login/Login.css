@@ -223,13 +223,6 @@ input[type=text]:placeholder {
   transition: width 0.2s;
 }
 
-.underlineHover:hover {
-  color: #0d0d0d;
-}
-
-.underlineHover:hover:after{
-  width: 100%;
-}
 
 
 *:focus {

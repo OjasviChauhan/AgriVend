@@ -9,28 +9,47 @@ import {
   Route,
   Link
 } from "react-router-dom";
-
+import BuyorSell from './Components/BuyorSell/BuyorSell';
+import Buy from './Components/Buy/Buy';
+import Header from './Components/Header/Header';
+import Checkout from './Components/Checkout/Checkout';
 
 function App() {
+
   return (
     <Router>
       <div className="app">
 
         <Switch>
 
-          <Route path="/">
+          <Route exact path="/">
             <Home />
           </Route>
 
-          <Route path="/login">
+          <Route exact path="/login">
             <Login />
           </Route>
 
-          <Route path="/register">
+          <Route exact path="/register">
             <Register />
           </Route>
 
+          <Route exact path="/buyorsell">
+            <BuyorSell />
+          </Route>
+
+          <Route exact path="/buy">
+            <Header />
+            <Buy />
+          </Route>
+
+          <Route exact path="/checkout">
+            <Header />
+            <Checkout />
+          </Route>
+
         </Switch>
+
       </div>
     </Router>
   );
