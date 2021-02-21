@@ -3,10 +3,17 @@ import './Header.css'
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import { Link } from 'react-router-dom';
 import { useStateValue } from '../../StateProvider';
+import { auth } from '../../firebase';
 
 const Header = () => {
 
     const [{ basket, user }, dispatch] = useStateValue();
+
+    const handleAuthentication = () => {
+        if (user) {
+            auth.signOut();
+        }
+    }
 
     return (
         <div className='header'>
@@ -20,14 +27,27 @@ const Header = () => {
                 <Link to='/buy'>
                     <h1 className='header__h1'>Buy</h1>
                 </Link>
+
+                <Link to='/buyorsell'>
+                    <h1 className='header__h1' style={{ padding: '30px' }}>Main Page</h1>
+                </Link>
             </div>
 
 
             <div className='header__nav'>
                 <Link to='/login'>
                     <div className='header__option'>
+
+                        <span className='header__optionLineTwo'>
+                            {user ? 'Sign Out' : 'Sign In'}
+                        </span>
+                    </div>
+                </Link>
+
+                <Link to={!user && '/login'}>
+                    <div onClick={handleAuthentication} className='header__option'>
                         <span className='header__optionLineOne'>
-                            Hello Farmers
+                            {user ? `Hello ${user.email}` : "Hello Guest"}
                         </span>
 
                         {/* <span className='header__optionLineTwo'>
@@ -36,7 +56,7 @@ const Header = () => {
                     </div>
                 </Link>
 
-                {/* <Link to='/order'>
+                <Link to='/orders'>
                     <div className='header__option'>
                         <span className='header__optionLineOne'>
                             Returns
@@ -46,7 +66,7 @@ const Header = () => {
                             & Orders
                         </span>
                     </div>
-                </Link> */}
+                </Link>
 
                 <Link to='/checkout'>
                     <div className='header__optionBasket'>
