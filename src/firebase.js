@@ -1,13 +1,13 @@
 import firebase from 'firebase';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCAEY3QYj2ubaSIc1ye8fUMT41jyjSRLLU",
-    authDomain: "agrivend.firebaseapp.com",
-    projectId: "agrivend",
-    storageBucket: "agrivend.appspot.com",
-    messagingSenderId: "1056221659260",
-    appId: "1:1056221659260:web:e6bdf0975d13e46ddec9f9",
-    measurementId: "G-36HJCEWXXL"
+  apiKey: "AIzaSyDnJdshSB6-lxZ4Nq9UuLIJHoXKFrKhIXI",
+  authDomain: "agrivend-896a2.firebaseapp.com",
+  projectId: "agrivend-896a2",
+  storageBucket: "agrivend-896a2.appspot.com",
+  messagingSenderId: "434402064624",
+  appId: "1:434402064624:web:6c2838a481cbf12e0faa35",
+  measurementId: "G-KFG902RCEF"
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
